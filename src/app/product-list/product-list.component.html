@@ -1,0 +1,29 @@
+<div class="container" >
+    <div style="width: 100%; justify-content: center;"> 
+    <input placeholder="Search" class="search-bar" (keyup)="filter($event)">
+    </div>
+    <div style="padding-top: 20px;">
+
+        <div class="item" *ngFor="let product of products">
+            <div class="image-container">
+                <img src="{{product.photoLink}}" style="height:270px;">
+            </div>
+            <div class="infos">
+                <div>
+                    <span class="label"> Description : {{product.description}}</span>
+                </div>
+                <div>
+                    <span class="label"> type : {{product.type}}</span>
+                </div>
+                <div>
+                    <span class="label"> Price : {{product.price}}</span>
+                </div>
+                <div>
+                    <span class="label"> Quantity : {{product.quantity}}</span>
+                </div>
+                </div>
+
+        </div>
+    </div>
+
+</div>
